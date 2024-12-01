@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="icon" href="10610523.png" type="image/x-icon">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container d-flex flex-column justify-content-center align-items-center py-5">
+        <h1 class="py-2 position-relative ">Bookmarker</h1>
+        <section class="formdiv w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+            <h2>
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class=" w-100 d-flex flex-column justify-content-center">
+                <label for="title" class="pb-2">
+                    <i class="fa-solid fa-book-bookmark pe-2"></i>
+                    Site Name
+                </label>
+                <input type="text" placeholder="Bookmark Name" class="form-control forminputs" id="title" onkeyup="validateName()">
+            </div>
+            <div class="w-100 d-flex flex-column justify-content-center">
+                <label for="siteLink" class="pb-2">
+                    <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                <input type="url" placeholder="Website URL" class="form-control forminputs" id="siteLink" onkeyup="validateLink()">
+            </div>
+            <div>
+                <button type="button" class="btn btn-success px-5" onclick="addBookmark()" id="submiting">Submit</button>
+                <button type="button" class="btn btn-warning px-5 text-white d-none" onclick="editBookmark()" id="updating">Edit</button>
+            <button type="button" class="btn btn-danger px-5" onclick="deleteAll()">Clear All</button>
+            </div>
+        </section>
+        <section class="w-100 p-3 list">
+            <input type="text" placeholder="search..." class="form-control mt-3 w-50 mx-auto" id="searchInput" onkeyup="search()">
+            <table class="table mt-4 text-center bg-light">
+                <thead>
+                    <tr>
+                        <th class="text-capitalize">index</th>
+                        <th class="text-capitalize">Website Name</th>
+                        <th class="text-capitalize">Visit</th>
+                        <th class="text-capitalize">Edit</th>
+                        <th class="text-capitalize">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="savedBookmarks">
+                    <!-- bookmarks list -->
+                    
+            </tbody>
+
+            </table>
+        </section>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
