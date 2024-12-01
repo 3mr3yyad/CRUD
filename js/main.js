@@ -16,6 +16,9 @@ function addBookmark() {
         websiteName: siteName.value,
         websiteLink: siteURL.value,
     }
+
+    clr()
+    
     bookMarksList.push(bookmark)
     localStorage.setItem("res", JSON.stringify(bookMarksList))
     
